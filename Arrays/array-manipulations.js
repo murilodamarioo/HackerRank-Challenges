@@ -12,7 +12,7 @@ for (let i = 0; i < m; i++) {
 }
 
 const arrayManipulations = (n, queries) => {
-    let array = new Array(n).fill(0);
+    let array = new Array(n+1).fill(0);
 
     for (let i = 0; i < queries.length; i++) {
         const a = queries[i][0];
