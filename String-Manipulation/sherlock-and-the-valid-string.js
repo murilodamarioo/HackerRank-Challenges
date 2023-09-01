@@ -4,12 +4,13 @@ const isValid = (s) => {
     for (let char of s) {
         dict[char] = (dict[char] || 0) + 1;
     }
+    console.log(dict);
 
     let frequencies = Object.values(dict);
     console.log(frequencies);
 
     let maxFrequency = Math.max(...frequencies);
-    console.log(`maxFrequency: ${maxFrequency}\n`);
+    console.log(`\nmaxFrequency: ${maxFrequency}`);
 
     let minFrequency = Math.min(...frequencies);
     console.log(`minFrequency: ${minFrequency}\n`);
@@ -18,7 +19,7 @@ const isValid = (s) => {
     console.log(`maxFrequencyCount: ${maxFrequencyCount}`);
 
     let minFrequencyCount = frequencies.filter(frequency => frequency === minFrequency).length;
-    console.log(`minFrequencyCount: ${minFrequencyCount}`);
+    console.log(`minFrequencyCount: ${minFrequencyCount}\n`);
 
     if (maxFrequency === minFrequency) {
         return 'YES';
@@ -28,7 +29,6 @@ const isValid = (s) => {
     } else {
         return 'NO';
     }
-    
 }
 
 
